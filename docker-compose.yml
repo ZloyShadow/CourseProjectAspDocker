@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  courseprojectaspdocker:
+    image: ${DOCKER_REGISTRY-}courseprojectaspdocker
+    build:
+      context: .
+      dockerfile: CourseProjectAspDocker/Dockerfile
+
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: webapp/Dockerfile
+
